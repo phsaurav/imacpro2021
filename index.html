@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Apple iMac 2021</title>
+		<!-- *Tailwind CDN -->
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<!-- *Custom CSS -->
+		<link rel="stylesheet" href="styles/style.css" />
+	</head>
+	<body>
+		<!-- *Header Start -->
+		<header></header>
+		<!-- *Main Body -->
+		<main>
+			<section class="container mx-auto">
+				<div class="grid lg:grid-cols-2 grid-cols-1 gap-3">
+					<!-- *iMac Image -->
+					<div class="w-96 lg:ml-auto mx-auto mt-20 lg:mr-12">
+						<img width="978px" src="images/mac.png" alt="" />
+					</div>
+					<div class="mt-16">
+						<!-- *Title -->
+						<h1 class="text-5xl font-semibold leading-snug">
+							Customize your Blue 24‑inch iMac with Apple M1 chip.
+						</h1>
+						<!-- *Model Information -->
+						<p class="text-gray-700 mt-6">
+							Apple M1 chip with 8-core CPU with 4 performance
+							cores and 4 efficiency cores, 7-core GPU, and
+							16-core Neural Engine
+						</p>
+						<ul class="my-2 text-gray-700">
+							<li class="my-2">8GB unified memory</li>
+							<li class="my-2">256GB SSD storage</li>
+							<li class="my-2">Two Thunderbolt / USB 4 ports</li>
+							<li class="my-2">Magic Mouse</li>
+							<li class="my-2">Magic Keyboard - US English</li>
+						</ul>
+						<!-- *Upgrade Options -->
+						<div>
+							<!-- *Memory -->
+							<div>
+								<h3 class="text-xl font-semibold mt-10">
+									Memory
+								</h3>
+								<button
+									class="
+										my-3
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									8GB unified memory
+								</button>
+								<button
+									class="
+										my-3
+										ml-1
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									8GB unified memory
+								</button>
+							</div>
+							<!-- *Storage -->
+							<div>
+								<h3 class="text-xl font-semibold mt-6">
+									Storage
+								</h3>
+								<button
+									class="
+										my-3
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									256GB SSD storage
+								</button>
+								<button
+									class="
+										my-3
+										ml-1
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									512GB SSD storage
+								</button>
+								<button
+									class="
+										my-3
+										ml-1
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									1TB SSD storage
+								</button>
+							</div>
+							<!-- *Delivery Opiton -->
+							<div>
+								<h3 class="text-xl font-semibold mt-6">
+									Delivery Option
+								</h3>
+								<button
+									class="
+										my-3
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									Friday August 25, Prime Delivery
+								</button>
+								<button
+									class="
+										my-3
+										ml-1
+										py-2
+										px-3
+										border border-gray-400
+										rounded-md
+										font-semibold
+									"
+								>
+									Friday August 21, Delivery Charge $20
+								</button>
+							</div>
+						</div>
+						<!-- *Price Table -->
+						<div class="w-3/4 mt-10">
+							<div class="grid grid-cols-2">
+								<div>
+									<ul>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">Best Price</li>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">Extra Memory Cost</li>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">Extra Storage Cost</li>
+										<li class="border-b-2 border-black font-semibold text-xl py-2">Delivery Charge</li>
+										<li class="border-b border-gray-500 font-semibold text-xl py-2">Total Price</li>
+									</ul>
+								</div>
+								<div class="w-1/4">
+									<ul>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">$<span>1299</span></li>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">$<span>0</span></li>
+										<li class="border-b border-gray-300 font-semibold text-xl py-2">$<span>0</span></li>
+										<li class="border-b-2 border-black font-semibold text-xl py-2">$<span>0</span></li>
+										<li class="border-b border-gray-500 font-semibold text-xl py-2">$<span>1299</span></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+						<!-- *Promo Input -->
+						<h3 class="text-xl font-semibold mt-8 text-gray-700">Add Promo Code</h3>
+						<input class="border p-2 border-gray-300 w-60" type="text" name="promo-input" id="promo-input">
+						<button class="p-2 bg-red-500 border border-red-500 text-white px-4 rounded">Apply</button>
+
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- *Footer Start -->
+		<footer>
+			<hr class="border m-4">
+			<h1 class="text-center text-5xl font-semibold my-3">Total: $<span>1299<span></span></h1>
+		</footer>
+		<!-- *Local JS -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
