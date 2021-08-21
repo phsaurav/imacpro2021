@@ -1,5 +1,5 @@
 //* Declearation
-let costs = { memory: 0, storage: 0, delivery: 0, base: 1299};
+let costs = { memory: 0, storage: 0, delivery: 0, base: 1299 };
 let totalCost = 1299;
 
 //* Select Elements
@@ -9,6 +9,8 @@ const deliveryBtns = document.querySelectorAll('.delivery-section button');
 const totalPrice = document.getElementById('total-display');
 const totalFooter = document.getElementById('footer-display');
 const buttonSection = [memoryBtns, storageBtns, deliveryBtns];
+const promoButton = document.querySelector('.promo-section button');
+const promoInput = document.querySelector('.promo-section input');
 
 // *Display Funcitons
 function setDisplayValue(element, value) {
@@ -17,13 +19,16 @@ function setDisplayValue(element, value) {
 
 function updateDisplayValue(processName) {
 	const element = document.getElementById(processName + '-display');
-	console.log(processName + '-display');
 	setDisplayValue(element, costs[processName]);
 }
 
 // *Calculate Total
 function calculateTotal() {
-	totalCost = parseFloat(costs.base) + parseFloat(costs.memory) + parseFloat(costs.storage) + parseFloat(costs.delivery);
+	totalCost =
+		parseFloat(costs.base) +
+		parseFloat(costs.memory) +
+		parseFloat(costs.storage) +
+		parseFloat(costs.delivery);
 	setDisplayValue(totalPrice, totalCost);
 	if (totalFooter.classList.contains('promo')) {
 		setDisplayValue(totalFooter, totalCost - totalCost * 0.2);
@@ -41,6 +46,7 @@ function removeActive(btns) {
 	}
 }
 
+// *Upgrade buttons
 for (let i = 0; i < buttonSection.length; i++) {
 	for (btn of buttonSection[i]) {
 		btn.addEventListener('click', function (e) {
@@ -55,3 +61,20 @@ for (let i = 0; i < buttonSection.length; i++) {
 		});
 	}
 }
+
+// *Promo Buttons
+promoButton.addEventListener('click', function () {
+	if (promoInput.value == 'stevekaku') {
+		totalFooter.classList.add('promo');
+		calculateTotal();
+		promoInput.value = '';
+		promoButton.style.backgroundColor = 'gray';
+	} else {
+		promoInput.classList.add('wrong');
+		promoInput.value = '';
+		alert('Wrong Promo!!');
+		setTimeout(function () {
+			promoInput.classList.remove('wrong');
+		}, 3000);
+	}
+});
