@@ -1,0 +1,9 @@
+.option-button button:hover{
+	background-color: rgba(75, 85, 99, 1);
+	color: white;
+	border: 2px solid  rgba(156, 163, 175, 1)
+}
+
+.active{
+	border: 2px solid rgba(96, 165, 250, 1)
+}
